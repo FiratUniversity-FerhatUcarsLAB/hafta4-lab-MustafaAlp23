@@ -1,3 +1,12 @@
+/*
+     * Ad Soyad: [Mustafa Alp Çalı]
+     * Ogrenci No: [250541131]
+     * Tarih: [06.11.2025]
+     * Aciklama: Gorev 1 - Ogrenci Bilgi Sistemi
+     * Bu program kullanicidan ogrenci bilgilerini alir ve
+     * duzenli bir formatta ekrana yazdirir.
+     */
+
 import java.util.Scanner;
 import java.util.Locale;
 import java.time.LocalDate; // Sistem tarihini almak için
