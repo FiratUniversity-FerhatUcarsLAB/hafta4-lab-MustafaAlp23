@@ -1,49 +1,39 @@
-import java.util.Scanner;
+ import java.util.Scanner;
+public class GeometrikHesap {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("\n=== GEOMETRIK HESAPLAYICI ===");
+        System.out.println("Dairenin yaricapini girin (cm):");
+        double r = input.nextDouble();
+        double pi = 3.14159;
 
-    public class OgrenciBilgi {
-        public static void main(String[] args) {
-            // Scanner objesi olusturun
-            Scanner input = new Scanner(System.in);
-            System.out.println("\n=== OGRENCI BILGI SISTEMI ===");
-            // Degisken tanimlamalari
-            // String ad, soyad;
-            System.out.println("Adinizi Girin");
-            String ad = input.nextLine();
-            System.out.println(ad);
-            System.out.println("Soyadi Girin");
-            String soyad = input.nextLine();
-            System.out.println(soyad);
-            System.out.printf("Ad Soyad: %s %s", ad, soyad);
-            // int ogrenciNo, yas;
-            System.out.println("Yasiniz:");
-            int yas = input.nextInt();
-            System.out.println(yas);
-            System.out.println("Ogrenci Numaranız:");
-            int ogrNo = input.nextInt();
-            System.out.println(ogrNo);
-            // gpa;
-            System.out.println("GPA:");
-            double gpa = input.nextDouble();
-            System.out.println(gpa);
-            String durum;
-                if (gpa < 1.8) {
-                    durum = "Basarisiz Ogrenci";
-                    System.out.println("KALDI"); // Eğer 1.8'den küçükse kaldı
-                } else {
-                    durum = "Basarili Ogrenci";
-                    System.out.println("GECTI"); // Değilse (yani 1.8 veya daha büyükse) geçti
-                }
-            // Scanner'i kapatin (önemli pratik)
-            input.close();
-            // --- Çıktı Formatı ---
-            System.out.println("\n=== OGRENCI BILGI SISTEMI ===");
+        //Cap hesapla
+        double cap = 2 * r;
 
-            // printf() kullanarak düzenli çıktı alma ve GPA'yı 2 ondalık basamakla gösterme
-            System.out.printf("Ad Soyad: %s %s%n", ad, soyad);
-            System.out.printf("Ogrenci No: %d%n", ogrNo);
-            System.out.printf("Yas: %d%n", yas);
-            System.out.printf("GPA: %.2f%n", gpa); // %.2f ile 2 ondalık basamak garantilenir
-            System.out.printf("Durum: %s%n", durum);
-            System.out.println("===============================");
-        }
+        //Dairenin alanını hesapla
+        double alan = pi * r * r;
+
+        //Dairenin cevresini hesapla
+        double cevre = 2 * pi * r;
+
+        //Bu yaricapli bir kurenin hacmini hesapla
+        double hacim = (4.0 / 3.0) * pi * Math.pow(r, 3);
+
+        //Bu yaricapli bir kurenin Yuzey Alanı
+        double yuzeyAlani = 4 * pi * Math.pow(r, 2);
+
+        // --- SONUÇLARIN EKRANA YAZDIRILMASI (Düzenli Format) ---
+        System.out.println("\nSONUCLAR:");
+        System.out.println("----------");
+
+        // printf() ile sütunları hizalama (%-20s: stringi soldan hizala ve 20 karakter boşluk bırak)
+        // Tüm sonuçları %.2f ile 2 ondalık basamakla gösteriyoruz.
+        System.out.printf("%-20s : %.2f cm%n", "Daire Capi", cap);
+        System.out.printf("%-20s : %.2f cm²%n", "Daire Alani", alan);
+        System.out.printf("%-20s : %.2f cm%n", "Daire Cevresi", cevre);
+        System.out.printf("%-20s : %.2f cm³%n", "Kure Hacmi", hacim);
+        System.out.printf("%-20s : %.2f cm²%n", "Kure Yuzey Alani", yuzeyAlani);
+
+        input.close();
     }
+}
