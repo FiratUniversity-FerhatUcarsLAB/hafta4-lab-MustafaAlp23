@@ -1,4 +1,13 @@
- import java.util.Scanner;
+/*
+     * Ad Soyad: [Mustafa Alp Çalı]
+     * Ogrenci No: [250541131]
+     * Tarih: [06.11.2025]
+     * Aciklama: Gorev 1 - Ogrenci Bilgi Sistemi
+     * Bu program kullanicidan ogrenci bilgilerini alir ve
+     * duzenli bir formatta ekrana yazdirir.
+     */
+
+import java.util.Scanner;
 public class GeometrikHesap {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
